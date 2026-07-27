@@ -1,0 +1,78 @@
+.phone{
+    width: min(240px, 70vw);
+    aspect-ratio: 300 / 540;
+    height: auto;
+    background:#222;
+    border-radius:38px;
+    padding:10px;
+    position:relative;
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+.camera{
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:black;
+    position:absolute;
+    top:12px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.screen{
+    width:100%;
+    height:100%;
+    border-radius:30px;
+    overflow:hidden;
+    position: relative;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+}
+.screen-image{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
+/* Auto scrolling image */
+
+.scroll-image {
+  animation: phoneScroll 8s linear forwards;
+}
+
+@keyframes phoneScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
+/* Large laptop / small desktop */
+@media (max-width:1200px){
+.phone{
+    width:min(220px,75vw);
+}
+}
+
+/* Tablet */
+@media (max-width:991px){
+
+.phone{
+    width:min(200px,70vw);
+}
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+.phone{
+    width:min(180px,65vw);
+}
+
+}

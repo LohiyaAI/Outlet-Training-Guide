@@ -1,0 +1,63 @@
+.step-card{
+    width:420px;
+
+    background:white;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
+    padding:20px;
+
+    display:grid;
+    grid-template-rows:auto auto 1fr;
+    row-gap:12px;
+    overflow: hidden;
+}
+
+.step-card h2{
+    color:#17375E;
+    margin:0;
+    font-size:28px;
+    line-height:1.3;
+}
+
+.step-card h3{
+    margin:0;
+    font-size:18px;
+    font-weight:600;
+    color:#2d3748;
+    line-height:1.4;
+}
+
+.instruction{
+    margin:0;
+
+    font-size:16px;
+    color:#555;
+    line-height:1.7;
+    white-space:pre-line;
+
+    overflow-y:auto;
+}
+
+@media (max-width:768px){
+
+.step-card{
+    width:95%;
+    max-width:450px;
+    height:300px;
+    padding:16px;
+}
+
+.step-card h2{
+    font-size:24px;
+}
+
+.step-card h3{
+    font-size:17px;
+}
+
+.instruction{
+    font-size:15px;
+}
+
+}

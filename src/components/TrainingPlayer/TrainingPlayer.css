@@ -1,0 +1,152 @@
+.training-layout{
+    display:grid;
+
+    grid-template-columns: auto auto;
+    column-gap:60px;
+
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    height:100%;
+
+    padding:30px 40px;
+    box-sizing:border-box;
+}
+
+.left-panel{
+    width:420px;
+    display:flex;
+}
+
+.player-section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:clamp(20px,3vh,40px);
+}
+
+.phone-section{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:560px;
+    gap:30px;
+}
+
+.progress-section{
+    margin-top:25px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.controls{
+    margin-top:25px;
+    display:flex;
+    gap:18px;
+}
+
+.control-btn{
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#17375E;
+    color:white;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+}
+
+.control-btn:hover{
+    background:#28558d;
+}
+.arrow-btn{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:#17375E;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+}
+.arrow-btn:hover{
+    background:#2f5d93;
+}
+@media (max-width:1200px){
+
+.training-layout{
+
+    grid-template-columns:auto auto;
+    column-gap:30px;
+
+    padding:20px;
+}
+
+.left-panel{
+    width:320px;
+}
+
+.phone-section{
+    gap:15px;
+}
+
+}
+@media (max-width:768px){
+
+.training-layout{
+
+    grid-template-columns:1fr;
+
+    justify-items:center;
+
+    row-gap:20px;
+
+    padding:15px;
+}
+
+.player-section{
+    width:100%;
+}
+
+.left-panel{
+    width:100%;
+    max-width:350px;
+    margin-left:0;
+    justify-content:center;
+}
+
+.phone-section{
+    gap:10px;
+}
+
+.progress-section{
+    margin-top:15px;
+}
+
+.controls{
+    margin-top:15px;
+}
+
+.arrow-btn{
+    width:34px;
+    height:34px;
+    font-size:18px;
+}
+
+.control-btn{
+    width:42px;
+    height:42px;
+    font-size:18px;
+}
+
+}
