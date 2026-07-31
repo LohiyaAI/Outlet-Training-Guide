@@ -1,6 +1,6 @@
 .phone{
-    width: min(240px, 70vw);
-    aspect-ratio: 300 / 540;
+    width: min(210px, 70vw);
+    aspect-ratio:10 / 21;
     height: auto;
     background:#222;
     border-radius:38px;

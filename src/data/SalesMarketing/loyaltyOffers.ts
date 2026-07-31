@@ -11,7 +11,7 @@ export const loyaltyOffers = [
     title: "Home",
     description: "",
     instruction:
-      "Go to 'Profile' from Top Right Corner.",
+      "Go to ' Profile ' from Top Navigation Bar.",
     narration:
       "Go to Profile",
     durationAfterSpeech: 3000,

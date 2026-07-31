@@ -15,7 +15,7 @@ export const opticalcustomersales=[
     title: "Home",
     description: "",
     instruction:
-      "1. Click on 'New Sale' to start a Sale\n2. Or Swipe Right to 'Billing' .",
+      "1. Click on 'New Sale' to start a Sale\n2. Or go to 'Billing' from the Bottom Navigation Bar.",
     narration:
       "Click on New Sale to start a Sale",
     durationAfterSpeech: 3000,
@@ -25,9 +25,9 @@ export const opticalcustomersales=[
     title: "Billing",
     description: "",
     instruction:
-      "Go to Billings Page to start the Sale.",
+      "Go to Billings Tab to start the Sale.",
     narration:
-      "Go to Billings Page to start the Sale",
+      "Go to Billings Tab to start the Sale",
     durationAfterSpeech: 3000,
   },
   {

@@ -9,9 +9,9 @@ export const storeSettings = [
     title: "Home",
     description: "",
     instruction:
-      "Go to Profile from the top Right Corner.",
+      "Go to Profile from the Top Navigation Bar.",
     narration:
-      "Go to Profile from the top Right Corner",
+      "Go to Profile from the Top Navigation Bar",
     durationAfterSpeech: 3000,
   },
   {
@@ -39,7 +39,7 @@ export const storeSettings = [
     title: "Store Settings",
     description: "",
     instruction:
-      "Edit Location Details here.",
+      "Edit Location Details here and click on ' Save '.",
     narration:
       "Edit Location Details",
     durationAfterSpeech: 3000,

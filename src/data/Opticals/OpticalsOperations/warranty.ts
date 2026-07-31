@@ -1,4 +1,4 @@
-import step1 from "../../../assets/home/hstep1.png";
+import step1 from "../../../assets/Opticals/OpticalsCS/OCSstep1.png";
 import step2 from "../../../assets/Opticals/Jobcards/OJCstep2.png";
 import step3 from "../../../assets/Opticals/Warranty/OWSstep1.png";
 import step4 from "../../../assets/Opticals/Warranty/OWSstep2.png";
@@ -13,9 +13,9 @@ export const warranty=[
     title: "Home",
     description: "",
     instruction:
-      "Go to 'Profile' from Top Right Corner.",
+      "Go to 'Profile' from Top Navigation Bar.",
     narration:
-      "Go to Profile from Top Right Corner.",
+      "Go to Profile from Top Navigation Bar.",
     durationAfterSpeech: 3000,
   },
   {

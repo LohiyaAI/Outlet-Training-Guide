@@ -1,3 +1,4 @@
+import step0 from "../../assets/CustomerSales/CSstep1.png";
 import step1 from "../../assets/profile.png";
 import step2 from "../../assets/staffSteps/staffStep1.png";
 import step3 from "../../assets/staffSteps/staffStep2.png";
@@ -6,6 +7,16 @@ import step5 from "../../assets/staffSteps/staffStep4.png";
 import step6 from "../../assets/staffSteps/staffStep5.png";
 
 export const staffSteps = [
+  {
+    image: step0,
+    title: "Home",
+    description: "",
+    instruction:
+      "Go to ' Profile ' from the Top Navigation Bar.",
+    narration:
+      "Go to ' Profile ' from the Top Navigation Bar",
+    durationAfterSpeech: 3000,
+  },
   {
     image: step1,
     title: "Profile",

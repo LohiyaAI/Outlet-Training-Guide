@@ -1,5 +1,11 @@
 export const kiranaSidebar = [
   {
+    title: " SignUp",
+    children: [
+      { title: "SignUp with Phone Number" },
+    ],
+  },
+  {
     title: " Login",
     children: [
       { title: "Login with Phone Number" },

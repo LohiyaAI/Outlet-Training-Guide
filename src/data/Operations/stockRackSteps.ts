@@ -1,10 +1,22 @@
+import step0 from "../../assets/CustomerSales/CSstep1.png";
 import step1 from "../../assets/profile.png";
 import step2 from "../../assets/stockRackSteps/SRstep1.png";
 import step3 from "../../assets/stockRackSteps/SRstep2.png";
 import step4 from "../../assets/stockRackSteps/SRstep3.png";
 import step5 from "../../assets/stockRackSteps/SRstep4.png";
+import step6 from "../../assets/stockRackSteps/SRstep5.png"
 
 export const stockRackSteps = [
+  {
+    image: step0,
+    title: "Home",
+    description: "",
+    instruction:
+      "Go to ' Profile ' from the Top Navigation Bar.",
+    narration:
+      "Go to ' Profile ' from the Top Navigation Bar",
+    durationAfterSpeech: 3000,
+  },
   {
     image: step1,
     title: "Profile",
@@ -20,7 +32,7 @@ export const stockRackSteps = [
     title: "Stock Racks",
     description: "",
     instruction:
-      "Click on 'Place Stock to put a Product in Rack'.",
+      "Click on ' Place Stock ' to put a Product in Rack.",
     narration:
       "Go to the Purchase screen in Billing",
     durationAfterSpeech: 3000,
@@ -52,7 +64,17 @@ export const stockRackSteps = [
     instruction:
       "Edit by clicking on the Product.\n1. Change the Quantity\n2. Move to another Rack\n3. Delete Product.",
     narration:
-      "Go to the Purchase screen in Billing",
+      "Edit by clicking on the Product.\n1.",
+    durationAfterSpeech: 3000,
+  },
+  {
+    image: step6,
+    title: "Find Product",
+    description: "",
+    instruction:
+      "1. Go to ' Stock ' page in ' Billing ' to see if the Product is placed in the Rack or not.",
+    narration:
+      "Go to Stock in Billing",
     durationAfterSpeech: 3000,
   },
 ]

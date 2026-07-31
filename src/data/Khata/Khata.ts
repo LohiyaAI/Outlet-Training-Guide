@@ -4,6 +4,7 @@ import step3 from "../../assets/khata/kstep2.png";
 import step4 from "../../assets/khata/kstep3.png";
 import step5 from "../../assets/khata/kstep4.png";
 import step6 from "../../assets/khata/kstep5.png";
+import step7 from "../../assets/khata/kstep6.png";
 
 export const Khata = [
   {
@@ -11,9 +12,9 @@ export const Khata = [
     title: "Home",
     description: "",
     instruction:
-      "Go to Khata in the Bottom.",
+      "Go to Khata from the Bottom Navigation Bar.",
     narration:
-      "Go to Khata in the Bottom",
+      "Go to Khata from the Bottom Navigation Bar",
     durationAfterSpeech: 3000,
   },
   {
@@ -51,7 +52,7 @@ export const Khata = [
     title: "Customer Added",
     description: "",
     instruction:
-      "Click on the Customer to\n1. Set Reminder for Udhaar\n2. Record Payment.",
+      "Click on the Customer to\n1. Set Reminder for Udhaar ( A WhatsApp message will be sent to the Customer )\n2. Record Payment.",
     narration:
       "Set Reminder for Udhaar and Record Payment.",
     durationAfterSpeech: 3000,
@@ -64,6 +65,16 @@ export const Khata = [
       "Click on 'Recover Payment'\n Add the Amount & 'Confirm Recovery'.",
     narration:
       "Click on Recover Payment and Add the Amount & Confirm Recovery",
+    durationAfterSpeech: 3000,
+  },
+  {
+    image: step7,
+    title: "Settled Payment",
+    description: "",
+    instruction:
+      "Recovered Payment Updates will be shown in 'Settled' .",
+    narration:
+      "Recovered Payment Updates will be shown in Settled",
     durationAfterSpeech: 3000,
   },
 ]

@@ -9,10 +9,9 @@ import { kiranaSidebar } from "./config/kiranaSidebar";
 import { opticalSidebar } from "./config/opticalSidebar";
 import { apparelSidebar } from "./config/apparelSidebar";
 import { electronicsSidebar } from "./config/electronicsSidebar";
-
+import {phoneSigninSteps} from "./data/Signin/phoneSigninsteps"
 import { phoneLoginSteps } from "./data/Login/phoneLoginSteps";
 import { usernameLoginSteps } from "./data/Login/usernameLoginSteps";
-
 import { Khata } from "./data/Khata/Khata";
 import { visionSteps } from "./data/visionSteps";
 import { customerSalesSteps } from "./data/CustomerSales/customerSalesSteps";
@@ -37,22 +36,62 @@ import{jobcards} from "./data/Opticals/OpticalsOperations/jobCards"
 import{warranty} from "./data/Opticals/OpticalsOperations/warranty"
 import{opticalstore} from "./data/Opticals/OpticalsStoreManagement/opticalStoreSettings"
 import{apparelcustomersales} from "./data/Apparel/apparelcustomersales/apparelcustomersales"
-import{apparelorders} from "./data/Apparel/apparelorders/apparelorders"
-import{apparelarticles} from "./data/Apparel/apparelarticles/apparelarticles"
+import{opticalskhata} from "./data/Opticals/OpticalsKhata/opticalskhata"
 import{apparelpurchases} from "./data/Apparel/apparelpurchases/apparelpurchases"
-import{apparelkhata} from "./data/Apparel/apparelkhata/apparelkhata"
 import{apparelstoresetting} from "./data/Apparel/apparelstoresetting/apparelstoresetting"
+import{apparelswitchstore} from "./data/Apparel/apparelstoresetting/apparelswitchstore"
 import{apparelvisionai} from "./data/Apparel/apparelvisionai/apparelvisionai"
+import{apparelsignin} from "./data/Apparel/ApparelSignin/apparelsignin"
+import{apparellogin} from "./data/Apparel/ApparelLogin/apparellogin"
+import{apparelusernamelogin} from "./data/Apparel/ApparelLogin/apparelusernamelogin"
+import{apparelkhata} from "./data/Apparel/ApparelKhata/apparelkhata"
+import{apparelcustomergrowth} from "./data/Apparel/ApparelCustomerManagement/apparelcustomergrowth"
+import{apparelcustomerrelations} from "./data/Apparel/ApparelCustomerManagement/apparelcustomerrelations"
+import{appareljobcards} from "./data/Apparel/ApparelOperations/appareljobcards"
+import{apparelreturn} from "./data/Apparel/ApparelOperations/apparelreturn"
+import{apparelstaff} from "./data/Apparel/ApparelOperations/apparelstaff"
+import{apparelstockrack} from "./data/Apparel/ApparelOperations/apparelstockrack"
+import{apparelloyalty} from "./data/Apparel/ApparelLoyalty/apparelloyalty"
+import{apparellanguage} from "./data/Apparel/ApparelAccount/apparellanguage"
+import{apparelpass} from "./data/Apparel/ApparelAccount/apparelpass"
 import{electronicscustomersales} from "./data/Electronics/electronicscustomersales"
 import{electronicsrepairs} from "./data/Electronics/electronicsrepairs"
 import{electronicsstock} from "./data/Electronics/electronicsstock"
-import{electronicspurchases} from "./data/Electronics/electronicspurchases"
-import{electronicskhata} from "./data/Electronics/electronicskhata"
-import{Ejobcards} from "./data/Electronics/electronicsOperations/Ejobcards"
-import{Ewarranty} from "./data/Electronics/electronicsOperations/Ewarranty"
+import{electronicslogin} from "./data/Electronics/ElectronicsLogin/electronicslogin"
+import{electronicsusername} from "./data/Electronics/ElectronicsLogin/electronicsusername"
+import{electronicssignin} from "./data/Electronics/ElectronicsSignin/electronicssignin"
+import{electronicspurchase} from "./data/Electronics/ElectronicsPurchases/electronicspurchase"
+import{electronicskhata} from "./data/Electronics/ElectronicsKhata/electronicskhata"
+import{electronicscg} from "./data/Electronics/ElectronicsCM/electronicscg"
+import{electronicscr} from "./data/Electronics/ElectronicsCM/electronicscr"
+import{elecstaff} from "./data/Electronics/ElectronicsOperations/elecstaff"
+import{elecreturns} from "./data/Electronics/ElectronicsOperations/elecreturns"
+import{elecwarranty} from "./data/Electronics/ElectronicsOperations/elecwarranty"
+import{elecstockracks} from "./data/Electronics/ElectronicsOperations/elecstockracks"
+import{elecloyalty} from "./data/Electronics/elecloyalty"
+import{elecssettings} from "./data/Electronics/ElectronicsSM/elecssettings"
+import{eleclanguage} from "./data/Electronics/ElectronicsAccount/eleclanguage"
+import{elecpass} from "./data/Electronics/ElectronicsAccount/elecpass"
+import{elecswitch} from "./data/Electronics/ElectronicsSM/elecswitch"
+import{electronicsvision} from "./data/Electronics/electronicsvision"
+import{opticalslogin} from "./data/Opticals/OpticalsLogin/opticalslogin"
+import{usernameopticallogin} from "./data/Opticals/OpticalsLogin/usernameopticallogin"
+import {opticalssignin} from "./data/Opticals/OpticalsSignin/opticalssignin"
+import {opticalscustomergrowth} from "./data/Opticals/OpticalsCustomerGrowth/opticalscustomergrowth"
+import {opticalscustomerrelations} from "./data/Opticals/OpticalsCustomerRelations/opticalscustomerrelations"
+import {opticalsstaff} from "./data/Opticals/OpticalsOperations/opticalsstaff"
+import {opticalsreturns} from "./data/Opticals/OpticalsOperations/opticalsreturns"
+import {opticalsstockracks} from "./data/Opticals/OpticalsOperations/opticalsstockracks"
+import {opticalsloyalty} from "./data/Opticals/OpticalsLoyalty/opticalsloyalty"
+import {opticalswitchstore} from "./data/Opticals/OpticalsStoreManagement/opticalswitchstore"
+import {opticalslanguage} from "./data/Opticals/OpticalsAccount/opticalslanguage"
+import {opticalspass} from "./data/Opticals/OpticalsAccount/opticalspass"
+import {opticalsvision} from "./data/Opticals/OpticalsVision/opticalsvision"
 
 const kiranaPageSteps: Record<string, any> = {
 
+  "SignUp":phoneSigninSteps,
+  "SignUp with Phone Number": phoneSigninSteps,
   "Login": phoneLoginSteps,
   "Login with Phone Number": phoneLoginSteps,
   "Login with Username": usernameLoginSteps,
@@ -75,76 +114,79 @@ const kiranaPageSteps: Record<string, any> = {
 };
 
 const opticalPageSteps: Record<string, any> = {
-  "Login": phoneLoginSteps,
-  "Login with Phone Number": phoneLoginSteps,
-  "Login with Username": usernameLoginSteps,
+  "SignUp":opticalssignin,
+  "SignUp with Phone Number": opticalssignin,
+  "Login": opticalslogin,
+  "Login with Phone Number": opticalslogin,
+  "Login with Username": usernameopticallogin,
   "Customer Sales": opticalcustomersales,
   "Booking": booking,
   "Stock": opticalstock,
   "Purchases": opticalpurchases,
-  "Khata": Khata,
-  "Customer Growth": customerGrowthSteps,
-  "Customer Relations": customerRelationsSteps,
-  "Staff": staffSteps,
-  "Estimates & Return": estimateSteps,
-  "Stock Racks": stockRackSteps,
+  "Khata": opticalskhata,
+  "Customer Growth": opticalscustomergrowth,
+  "Customer Relations": opticalscustomerrelations,
+  "Staff": opticalsstaff,
+  "Estimates & Return": opticalsreturns,
+  "Stock Racks": opticalsstockracks,
   "Job Cards": jobcards,
   "Warranty & Serials": warranty,
-  "Loyalty Offers": loyaltyOffers,
-  "Switch/Add Store": switchStore,
+  "Loyalty Offers": opticalsloyalty,
+  "Switch/Add Store": opticalswitchstore,
   "Store Setting":opticalstore,
-  "Language": language,
-  "Password & Security":password,
-  "Vision AI": visionSteps,
+  "Language": opticalslanguage,
+  "Password & Security":opticalspass,
+  "Vision AI": opticalsvision,
 
 };
 
 const apparelPageSteps: Record<string,any>={
-  "Login": phoneLoginSteps,
-  "Login with Phone Number": phoneLoginSteps,
-  "Login with Username": usernameLoginSteps,
-  "Customer Sales": apparelcustomersales,
-  "Orders": apparelorders,
-  "Articles": apparelarticles,
+  "SignUp":apparelsignin,
+  "SignUp with Phone Number": apparelsignin,
+  "Login": apparellogin,
+  "Login with Phone Number": apparellogin,
+  "Login with Username": apparelusernamelogin,
+  "Orders / Articles": apparelcustomersales,
   "Purchases": apparelpurchases,
   "Khata": apparelkhata,
-  "Customer Growth": customerGrowthSteps,
-  "Customer Relations": customerRelationsSteps,
-  "Staff": staffSteps,
-  "Estimates & Return": estimateSteps,
-  "Stock Racks": stockRackSteps,
-  "Job Cards": jobcards,
-  "Loyalty Offers": loyaltyOffers,
-  "Switch/Add Store": switchStore,
+  "Customer Growth": apparelcustomergrowth,
+  "Customer Relations": apparelcustomerrelations,
+  "Staff": apparelstaff,
+  "Estimates & Return": apparelreturn,
+  "Stock Racks": apparelstockrack,
+  "Job Cards": appareljobcards,
+  "Loyalty Offers": apparelloyalty,
+  "Switch/Add Store": apparelswitchstore,
   "Store Setting": apparelstoresetting,
-  "Language": language,
-  "Password & Security":password,
+  "Language": apparellanguage,
+  "Password & Security":apparelpass,
   "Vision AI": apparelvisionai,
 
 }
 
 const electronicsPageSteps: Record<string,any>={
-  "Login": phoneLoginSteps,
-  "Login with Phone Number": phoneLoginSteps,
-  "Login with Username": usernameLoginSteps,
+  "SignUp":electronicssignin,
+  "SignUp with Phone Number": electronicssignin,
+  "Login": electronicslogin,
+  "Login with Phone Number": electronicslogin,
+  "Login with Username": electronicsusername,
   "Customer Sales": electronicscustomersales,
   "Repairs": electronicsrepairs,
   "Stock": electronicsstock,
-  "Purchases": electronicspurchases,
+  "Purchases": electronicspurchase,
   "Khata": electronicskhata,
-  "Customer Growth": customerGrowthSteps,
-  "Customer Relations": customerRelationsSteps,
-  "Staff": staffSteps,
-  "Estimates & Return": estimateSteps,
-  "Stock Racks": stockRackSteps,
-  "Job Cards": Ejobcards,
-  "Warranty & Sales": Ewarranty,
-  "Loyalty Offers": loyaltyOffers,
-  "Switch/Add Store": switchStore,
-  "Store Setting": apparelstoresetting,
-  "Language": language,
-  "Password & Security":password,
-  "Vision AI": apparelvisionai,
+  "Customer Growth": electronicscg,
+  "Customer Relations": electronicscr,
+  "Staff": elecstaff,
+  "Estimates & Return": elecreturns,
+  "Stock Racks": elecstockracks,
+  "Warranty & Serials": elecwarranty,
+  "Loyalty Offers": elecloyalty,
+  "Switch/Add Store": elecswitch,
+  "Store Setting": elecssettings,
+  "Language": eleclanguage,
+  "Password & Security":elecpass,
+  "Vision AI": electronicsvision,
 
 }
 

@@ -1,4 +1,10 @@
 export const apparelSidebar=[
+  {
+    title: " SignUp",
+    children: [
+      { title: "SignUp with Phone Number" },
+    ],
+  },
     {
     title: " Login",
     children: [
@@ -6,15 +12,16 @@ export const apparelSidebar=[
       { title: "Login with Username" },
     ],
   },
-  { title: "Customer Sales" },
-  {
-    title: "Orders",
-    badge:"apparel"
-},
   { 
-    title: "Articles",
+    title: "Customer Sales",
     badge: "apparel",
-},
+    children:[
+      {
+        title:"Orders / Articles"
+      }
+    ]
+  },
+  
   { title: "Purchases" },
   { title: "Khata" },
   { title: "Customer Management",
@@ -52,5 +59,5 @@ export const apparelSidebar=[
       {title:"Password & Security"},
     ]
    },
-  { title: "Vision AI" },
+{ title: "Vision AI" },
 ]

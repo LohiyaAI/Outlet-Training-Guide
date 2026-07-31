@@ -9,6 +9,8 @@ import step8 from "../../assets/mybasketsteps/MBstep6.png";
 import step9 from "../../assets/mybasketsteps/MBstep7.png";
 import step10 from "../../assets/mybasketsteps/MBstep8.png";
 import step11 from "../../assets/mybasketsteps/MBstep9.png";
+import step12 from "../../assets/mybasketsteps/MBstep10.png";
+import step13 from "../../assets/mybasketsteps/MBstep11.png";
 
 export const myBaskets = [
   {
@@ -16,9 +18,9 @@ export const myBaskets = [
     title: "Home Page",
     description: "",
     instruction:
-      "Go to Profile.",
+      "Go to ' Profile ' from the Top Navigation Bar.",
     narration:
-      "Go to Profile.",
+      "Go to Profile from the Top Navigation Bar.",
     durationAfterSpeech: 3000,
   },
   {
@@ -76,7 +78,7 @@ export const myBaskets = [
     title: "Basket Added",
     description: "",
     instruction:
-      "New Basket is Added.",
+      "New Basket is Added\n1. Click on the 'Pen' icon to Edit Basket.",
     narration:
       "New Basket is Added",
     durationAfterSpeech: 3000,
@@ -86,7 +88,7 @@ export const myBaskets = [
     title: "Edit Basket",
     description: "",
     instruction:
-      "Click on the 'Pen' icon to Edit Basket\nHere you can\n1. Change Name\n2. Change Validity\n3. Add/Remove Products.",
+      "Here you can\n1. Change Name\n2. Change Validity\n3. Add/Remove Products.",
     narration:
       "Click on the 'Pen' icon to Edit Basket",
     durationAfterSpeech: 3000,
@@ -116,9 +118,29 @@ export const myBaskets = [
     title: "Place Order",
     description: "",
     instruction:
-      "1. Select the Mode of Payment\n2. Click on Place Order.",
+      "1. Select the Mode of Payment\n2. Click on ' Place Order '.",
     narration:
       " Select the Mode of Payment and Click on Place Order",
+    durationAfterSpeech: 3000,
+  },
+  {
+    image: step12,
+    title: "Order Placed ",
+    description: "",
+    instruction:
+      "1. Click on ' Print Receipt ' to get the Receipt\n2. Click on ' View Order Details ' to see the Details of the Order.",
+    narration:
+      " Click on ' View Order Details ' to see the Details of the Order",
+    durationAfterSpeech: 3000,
+  },
+  {
+    image: step13,
+    title: "Order Details",
+    description: "",
+    instruction:
+      "Here you can see thee Basket and the items in the Basket that were ordered.",
+    narration:
+      "Here you can see thee Basket and the items in the Basket",
     durationAfterSpeech: 3000,
   },
 ]

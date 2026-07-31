@@ -8,7 +8,7 @@ export const switchStore = [
     title: "Home",
     description: "",
     instruction:
-      "Go to 'Profile' from Top Right Corner .",
+      "Go to Profile from the Top Navigation Bar.",
     narration:
       "Go to the Profile",
     durationAfterSpeech: 3000,

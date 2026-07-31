@@ -11,7 +11,7 @@ export const opticalstock=[
     title: "Home",
     description: "",
     instruction:
-      "Go to 'Billing' from the Bottom of the Home Page.",
+      "Go to 'Billing' from the Bottom Navigation Bar.",
     narration:
       "Go to Billing from the Bottom of the Home Page",
     durationAfterSpeech: 3000,
@@ -22,9 +22,9 @@ export const opticalstock=[
     title: "Billing",
     description: "",
     instruction:
-      "1.Swipe to 'Stock' Page\n2. Click on '+' to Add a Product ",
+      "1.Go to 'Stock' Page\n2. Click on '+' to Add a Product ",
     narration:
-      "Swipe to Stock Page and Click on plus to Add a Product ",
+      "Go to Stock Page and Click on plus to Add a Product ",
     durationAfterSpeech: 3000,
   },
   {

@@ -15,17 +15,47 @@ export const booking=[
     title: "Home",
     description: "",
     instruction:
-      "1. Swipe Right to go to the 'Bookings' page\n2. Click on 'Appointments' ",
+      "1. Go to the 'Bookings' Tab from the Bottom Navigation Bar ",
     narration:
-      "Swipe Right to go to the 'Bookings' page and Click on 'Appointments",
+      "Go to the 'Bookings' tab",
+    durationAfterSpeech: 3000,
+  },
+    {
+    image: step5,
+    title: "Services & Appointments",
+    description: "Services",
+    instruction:
+      "1. Go to the 'Services' Page\n 2. Click on '+ New Service'.",
+    narration:
+      "Go to the Services Page and Click on New Service",
+    durationAfterSpeech: 3000,
+  },
+    {
+    image: step6,
+    title: "New Service",
+    description: "",
+    instruction:
+      "Fill in the\n1. Name of the Service\n2. Price\n3. Duration\nClick on 'Create Service'",
+    narration:
+      "Fill in the Name of the Service, Price, Duration and Click on Create Service",
+    durationAfterSpeech: 3000,
+  },
+  {
+    image: step7,
+    title: "Service Added",
+    description: "",
+    instruction:
+      "New Service has been Added\n Click on the Toggle to make the Service available.",
+    narration:
+      "New Service has been Added, Click on the Toggle to make the Service available",
     durationAfterSpeech: 3000,
   },
   {
     image: step2,
-    title: "Services & Appointments",
-    description: "Appointmenst",
+    title: "Appointments",
+    description: "",
     instruction:
-      "Click on 'Book' to enter a Booking.",
+      "On the ' Appointments ' page Click on 'Book' to enter a Booking.",
     narration:
       "Click on Book to enter a Booking",
     durationAfterSpeech: 3000,
@@ -50,44 +80,17 @@ export const booking=[
       "Appointment is Added Change the sate of the Appointment using No-show cancel complete.",
     durationAfterSpeech: 3000,
   },
-  {
-    image: step5,
-    title: "Services",
-    description: "",
-    instruction:
-      "1. Swipe Right to the 'Services' Page\n 2. Click on '+ New Service'.",
-    narration:
-      "Swipe Right to the Services Page and Click on New Service",
-    durationAfterSpeech: 3000,
-  },
-  {
-    image: step6,
-    title: "New Service",
-    description: "",
-    instruction:
-      "Fill in the\n1. Name of the Service\n2. Price\n3. Duration\nClick on 'Create Service'",
-    narration:
-      "Fill in the Name of the Service, Price, Duration and Click on Create Service",
-    durationAfterSpeech: 3000,
-  },
-  {
-    image: step7,
-    title: "Service Added",
-    description: "",
-    instruction:
-      "New Service has been Added\n Click on the Toggle to make the Service available.",
-    narration:
-      "New Service has been Added, Click on the Toggle to make the Service available",
-    durationAfterSpeech: 3000,
-  },
+
+
+  
   {
     image: step8,
     title: "Memberships",
     description: "",
     instruction:
-      "1.Swipe Right to Memberships Page\n2. Click on 'New Membership'.",
+      "1.Go to Memberships Page\n2. Click on 'New Membership'.",
     narration:
-      "Swipe Right to Memberships Page and Click on New Membership",
+      "Go to Memberships Page and Click on New Membership",
     durationAfterSpeech: 3000,
   },
   {
@@ -102,7 +105,7 @@ export const booking=[
   },
   {
     image: step10,
-    title: "Memvership",
+    title: "Membership",
     description: "",
     instruction:
       "1. Membership has been created\n2. Click on 'Use Session' to use the Pass.",

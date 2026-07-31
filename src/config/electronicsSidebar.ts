@@ -1,4 +1,10 @@
 export const electronicsSidebar=[
+  {
+    title: " SignUp",
+    children: [
+      { title: "SignUp with Phone Number" },
+    ],
+  },
     {
     title: " Login",
     children: [
@@ -28,10 +34,6 @@ export const electronicsSidebar=[
       {title:"Staff"},
       {title:"Estimates & Return"},
       {title:"Stock Racks"},
-      {
-        title:"Job Cards",
-        badge:"electronics",
-    },
     {
         title:"Warranty & Serials",
         badge:"electronics",

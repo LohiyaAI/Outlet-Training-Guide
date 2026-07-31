@@ -12,9 +12,9 @@ export const opticalpurchases=[
     title: "Home",
     description: "",
     instruction:
-      "Go to 'Billing' from the Bottom of the Page.",
+      "Go to ' Billing ' from the Bottom Navigation Bar.",
     narration:
-      "Go to Billing from the Bottom of the Page",
+      "Go to Billing from the Bottom Navigation Bar",
     durationAfterSpeech: 3000,
   },
   {
@@ -22,9 +22,9 @@ export const opticalpurchases=[
     title: "Purchases",
     description: "",
     instruction:
-      "1. Swipe Right to the 'Purchases' Page\n2. Click on 'Add' to Add a Supplier.",
+      "1. Go to the 'Purchases' Page\n2. Click on 'Add' to Add a Supplier.",
     narration:
-      "Swipe Right to the 'Purchases' Page",
+      "Go to the 'Purchases' Page",
     durationAfterSpeech: 3000,
   },
   {
@@ -72,7 +72,7 @@ export const opticalpurchases=[
     title: "Khata",
     description: "",
     instruction:
-      "1. Go to Khata\n2. Swipe to Supplier Udhaar\n3. You can see the Transactions and Due Dates of the Supplier here.",
+      "1. Go to Khata\n2. Go to Supplier Udhaar\n3. You can see the Transactions and Due Dates of the Supplier here.",
     narration:
       "You can see the Transactions and Due Dates of the Supplier in Khata",
     durationAfterSpeech: 3000,

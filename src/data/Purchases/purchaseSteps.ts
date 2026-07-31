@@ -1,32 +1,55 @@
-import step1 from "../../assets/Purchases/purchasestep1.png";
-import step2 from "../../assets/Purchases/purchasestep2.png";
-import step3 from "../../assets/Purchases/purchasestep3.png";
-import step4 from "../../assets/Purchases/purchasestep4.png";
-import step5 from "../../assets/Purchases/purchasestep5.png";
+
+import step0 from "../../assets/CustomerSales/CSstep1.png";
+import step1 from "../../assets/Stock/stockstep8.png";
+import step2 from "../../assets/Purchases/purchasestep1.png";
+import step3 from "../../assets/Purchases/purchasestep2.png";
+import step4 from "../../assets/Purchases/purchasestep3.png";
+import step5 from "../../assets/Purchases/purchasestep4.png";
+import step6 from "../../assets/Purchases/purchasestep5.png";
 
 export const purchaseSteps = [
   {
-    image: step1,
-    title: "Purchase",
+    image: step0,
+    title: "Home",
     description: "",
     instruction:
-      "Go to the Purchase screen in Billing.",
+      "Go to ' Billing ' screen from Bottom Navigation Bar.",
     narration:
-      "Go to the Purchase screen in Billing",
+      "Go to ' Billing ' screen from the Home page",
+    durationAfterSpeech: 3000,
+  },
+  {
+    image: step1,
+    title: "Billing",
+    description: "",
+    instruction:
+      "Go to the Purchase screen in Billing by swiping to the Right.",
+    narration:
+      "Go to the Purchase screen in Billing by swiping to Right",
     durationAfterSpeech: 3000,
   },
   {
     image: step2,
+    title: "Purchase",
+    description: "",
+    instruction:
+      "1. Here you can see the List of the Suppliers.\n2. Click on ' + Add ' to add a New Supplier.",
+    narration:
+      "Click on Add to add a New Supplier.",
+    durationAfterSpeech: 3000,
+  },
+  {
+    image: step3,
     title: "Add Supplier",
     description: "",
     instruction:
-      "Click on the Add button to add a New Supplier and enter the Details.",
+      "1. Enter the Details of the Supplier.\n2. Click on ' Save Supplier '",
     narration:
       "Click on the Add button to add a New Supplier and enter the Details.",
     durationAfterSpeech: 3000,
   },
   {
-    image: step3,
+    image: step4,
     title: "Add Purchases",
     description: "",
     instruction:
@@ -36,7 +59,7 @@ export const purchaseSteps = [
     durationAfterSpeech: 3000,
   },
   {
-    image: step4,
+    image: step5,
     title: "Product",
     description: "",
     instruction:
@@ -46,7 +69,7 @@ export const purchaseSteps = [
     durationAfterSpeech: 3000,
   },
   {
-    image: step3,
+    image: step4,
     title: "Scan Invoice",
     description: "",
     instruction:
@@ -57,7 +80,7 @@ export const purchaseSteps = [
   },
 
   {
-    image: step5,
+    image: step6,
     title: "Upload Invoice",
     description: "",
     instruction:

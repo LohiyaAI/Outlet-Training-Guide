@@ -8,9 +8,9 @@ export const language = [
     title: "Home",
     description: "",
     instruction:
-      "Go to Profile from the top Right Corner.",
+      "Go to ' Profile ' from the Top Navigation Bar.",
     narration:
-      "Go to Profile from the top Right Corner",
+      "Go to Profile from the Top Navigation Bar",
     durationAfterSpeech: 3000,
   },
   {
