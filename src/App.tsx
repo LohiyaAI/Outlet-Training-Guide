@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import TrainingPlayer from "./components/TrainingPlayer/TrainingPlayer";
 import Navbar from "./components/Navbar/Navbar";
 import type { Vertical } from "./types/vertical";
+import type { Language } from "./types/step";
 import { kiranaSidebar } from "./config/kiranaSidebar";
 import { opticalSidebar } from "./config/opticalSidebar";
 import { apparelSidebar } from "./config/apparelSidebar";
@@ -197,6 +198,8 @@ function App() {
   
   const [selectedVertical, setSelectedVertical] =
     useState<Vertical>("Kirana");
+  const [selectedLanguage, setSelectedLanguage] =
+    useState<Language>("en");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const sidebars = {
     Kirana: kiranaSidebar,
@@ -235,6 +238,8 @@ function App() {
       <Navbar
         selectedVertical={selectedVertical}
         setSelectedVertical={setSelectedVertical}
+        selectedLanguage={selectedLanguage}
+        setSelectedLanguage={setSelectedLanguage}
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
       />
@@ -256,6 +261,7 @@ function App() {
           <TrainingPlayer
             key={selectedPage}
             steps={currentSteps}
+            language={selectedLanguage}
           />
         </main>
       </div>
