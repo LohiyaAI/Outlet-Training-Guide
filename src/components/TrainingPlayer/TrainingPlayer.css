@@ -30,12 +30,12 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    height:560px;
+    height:auto;
     gap:30px;
 }
 
 .progress-section{
-    margin-top:25px;
+    margin-top:15px;
     display:flex;
     flex-direction:column;
     align-items:center;

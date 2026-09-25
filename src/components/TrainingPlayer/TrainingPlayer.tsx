@@ -12,6 +12,107 @@ const SPEECH_RATES: Record<Language, number> = {
   hi: 1.0,
 };
 
+// ── Voice-selection helpers ────────────────────────────────────────────────
+
+/**
+ * Helper to identify whether a voice is female.
+ * Evaluates explicit markers, negative male indicators, and known voice names.
+ */
+function isFemaleVoice(voice: SpeechSynthesisVoice): boolean {
+  const name = voice.name.toLowerCase();
+
+  // 1. Explicit negative male indicators
+  if (
+    name.includes(" male") ||
+    name.startsWith("male") ||
+    name.includes(" man") ||
+    name.startsWith("man") ||
+    /\b(david|george|mark|ravi|madhav|prabhat|guy|james|richard|stefan|pavel)\b/i.test(name)
+  ) {
+    return false;
+  }
+
+  // 2. Explicit positive female indicators
+  if (name.includes("female") || name.includes("woman")) {
+    return true;
+  }
+
+  // 3. Known female voice names across Windows, macOS, Android, Chrome, Edge
+  const femaleNames = [
+    "swara", "kalpana", "lekha", "aditi", "heera", "raveena", "veena",
+    "zira", "susan", "hazel", "karen", "moira", "tessa", "samantha",
+    "victoria", "allison", "ava", "serena", "fiona", "emily", "joanna",
+    "salli", "kendra", "kimberly", "ivy", "aria", "jenny", "natasha",
+    "neerja", "ananya", "priya", "sunita", "shruti"
+  ];
+  if (femaleNames.some((n) => name.includes(n))) {
+    return true;
+  }
+
+  // 4. Vendor defaults: Google voices and Microsoft natural voices without male markers
+  if (name.startsWith("google") || name.includes("natural")) {
+    return true;
+  }
+
+  return false;
+}
+
+/**
+ * Selects the best English voice from the available list, preferring:
+ * 1. en-IN female
+ * 2. Any English female
+ * 3. en-IN any
+ * 4. Any English
+ * Never returns a Hindi/non-English voice.
+ */
+function selectEnglishVoice(
+  voices: SpeechSynthesisVoice[]
+): SpeechSynthesisVoice | undefined {
+  const englishVoices = voices.filter((v) =>
+    v.lang.toLowerCase().startsWith("en")
+  );
+
+  const isEnIn = (v: SpeechSynthesisVoice) =>
+    v.lang.toLowerCase() === "en-in" ||
+    v.lang.toLowerCase() === "en_in";
+
+  return (
+    englishVoices.find((v) => isEnIn(v) && isFemaleVoice(v)) ||
+    englishVoices.find((v) => isFemaleVoice(v)) ||
+    englishVoices.find((v) => isEnIn(v)) ||
+    englishVoices[0]
+  );
+}
+
+/**
+ * Selects the best Hindi voice from the available list, preferring:
+ * 1. hi-IN female
+ * 2. Any Hindi female
+ * 3. Any Hindi
+ * Returns undefined if no Hindi voice is available (never fallback to English).
+ */
+function selectHindiVoice(
+  voices: SpeechSynthesisVoice[]
+): SpeechSynthesisVoice | undefined {
+  const hindiVoices = voices.filter(
+    (v) =>
+      v.lang.toLowerCase().startsWith("hi") ||
+      v.name.toLowerCase().includes("hindi")
+  );
+
+  const isHiIn = (v: SpeechSynthesisVoice) =>
+    v.lang.toLowerCase() === "hi-in" ||
+    v.lang.toLowerCase() === "hi_in";
+
+  return (
+    hindiVoices.find((v) => isHiIn(v) && isFemaleVoice(v)) ||
+    hindiVoices.find((v) => isFemaleVoice(v)) ||
+    hindiVoices[0]
+  );
+}
+
+// ──────────────────────────────────────────────────────────────────────────
+
 interface TrainingPlayerProps {
   steps: Step[];
   language: Language;
@@ -111,15 +212,7 @@ export default function TrainingPlayer({ steps, language }: TrainingPlayerProps)
           speech.lang = "hi-IN";
           speech.rate = SPEECH_RATES.hi;
 
-          // Look for a Hindi / hi-IN voice
-          const hindiVoice = availableVoices.find(
-            (v) =>
-              v.lang.toLowerCase().startsWith("hi") ||
-              v.lang.toLowerCase() === "hi-in" ||
-              v.lang.toLowerCase() === "hi_in" ||
-              v.name.toLowerCase().includes("hindi")
-          );
-
+          const hindiVoice = selectHindiVoice(availableVoices);
           if (hindiVoice) {
             speech.voice = hindiVoice;
           } else {
@@ -133,13 +226,7 @@ export default function TrainingPlayer({ steps, language }: TrainingPlayerProps)
           speech.lang = "en-IN";
           speech.rate = SPEECH_RATES.en;
 
-          // Prefer Indian English voice, then common English female voices
-          const englishVoice =
-            availableVoices.find((v) => v.lang === "en-IN" || v.name.includes("Heera")) ||
-            availableVoices.find((v) => v.name.includes("Google UK English Female")) ||
-            availableVoices.find((v) => v.name.includes("Zira")) ||
-            availableVoices.find((v) => v.lang.toLowerCase().startsWith("en"));
-
+          const englishVoice = selectEnglishVoice(availableVoices);
           if (englishVoice) {
             speech.voice = englishVoice;
           }
